@@ -1,0 +1,40 @@
+#!/usr/bin/rapido
+
+impresión("Hola Mundo!")
+
+dejar array = [1, 2, 3, 4]
+
+impresión("dos \(array[2])")
+
+enumeración Hoy : Entero {
+    caso lunes
+    caso martes
+    caso miércoles
+    caso jueves
+    caso viernes
+    caso sábado
+    caso domingo
+
+    función día() -> Cuerda {
+        cambiar yo {
+            caso .lunes:
+                regreso "lunes"
+            caso .martes:
+                regreso "martes"
+            caso .miércoles:
+                regreso "miércoles"
+            caso .jueves:
+                regreso "jueves"
+            caso .viernes:
+                regreso "viernes"
+            caso .sábado:
+                regreso "sábado"
+            caso .domingo:
+                regreso "domingo"
+        }
+    }
+}
+
+dejar hoy = Hoy.viernes
+
+impresión("Hay una fiesta el \(hoy.día())")
